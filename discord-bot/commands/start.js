@@ -74,7 +74,8 @@ module.exports.run = async(client, message, args) => {
           "iron": 0,
           "coal": 0
         }
-      }
+      },
+      "banned": false
     });
   });
   
