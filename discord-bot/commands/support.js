@@ -4,7 +4,7 @@ const jsonstore = require(`jsonstore.io`);
 let store = new jsonstore(config.jsonstoreToken);
 
 module.exports.run = async(client, message, args) => {
-  return message.channel.send(`${message.author} This command is not available!`);
+  return message.channel.send(`Join our support server: https://disc-miner.glitch.me/support.`);
 }
 
 module.exports.config = {

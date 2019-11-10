@@ -2,16 +2,16 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "hello-sqlite",
+  "name": "disc-miner",
   "version": "0.0.1",
-  "description": "A simple Node app with SQLite as a database management system, instantly up and running.",
+  "description": "A Discord bot centered around Minecraft, where one can mine, chop and sell items to buy better tools and enchantments.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "sqlite3": "^4.0.0",
+    "express": "^4.16.4",
+    "sqlite3": "^4.1.0",
     "discord.js": "^11.5.1",
     "getjson": "^0.0.1",
     "fs": "^0.0.2",
@@ -23,7 +23,7 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-sqlite"
+    "url": "https://glitch.com/edit/#!/disc-miner"
   },
   "license": "MIT",
   "keywords": [

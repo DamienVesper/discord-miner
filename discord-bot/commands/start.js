@@ -58,7 +58,7 @@ module.exports.run = async(client, message, args) => {
       "materials": {
         "buildingBlocks": {
           "oakLog": 0,
-          "spurceLog": 0,
+          "spruceLog": 0,
           "darkOakLog": 0,
           "acaciaLog": 0,
           "jungleLog": 0,
@@ -77,9 +77,8 @@ module.exports.run = async(client, message, args) => {
       },
       "banned": false
     });
-  });
-  
-  message.channel.send(`You have received your <:WoodPick:642139596779683861> and your <:WoodAxe:642139596557254656>. Happy mining!`);
+    message.channel.send(`You have received your <:WoodPick:642139596779683861> and your <:WoodAxe:642139596557254656>. Happy mining!`);
+  });  
 }
 
 module.exports.config = {

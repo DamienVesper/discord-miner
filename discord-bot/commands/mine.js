@@ -9,13 +9,18 @@ module.exports.run = async(client, message, args) => {
     if(!data) return message.channel.send(`${message.author} Do \`m!start\` to begin your adventure!`);
     if(data[`cooldowns`][`mine`] == 0) {
       if(data[`tools`][`pickaxe`][`type`] == `wood`) {
-        let stonePickup = Math.floor(Math.random() * 10) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
-        let coalPickup = Math.floor(Math.random() * 7) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
+        let stonePickup = Math.floor((Math.random() * 10) + 1) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
+        let coalPickup = Math.floor((Math.random() * 7) + 1) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
         
         store.write(`users/${message.author.id}/materials/buildingBlocks/stone`, data[`materials`][`buildingBlocks`][`stone`] += stonePickup);
         store.write(`users/${message.author.id}/materials/ores/coal`, data[`materials`][`ores`][`coal`] += coalPickup);
         
-        message.channel.send(`You mined ${stonePickup} <:Stone:642139596670500890> and ${coalPickup} <:Coal:642139596615843840>.`);
+        message.channel.send(`You mined ${stonePickup} <:Stone:642139596670500890> and ${coalPickup} <:Coal:642139596615843840> with your <:WoodPick:642139596779683861>.`);
+        
+        store.write(`users/${message.author.id}/cooldowns/mine`, 1);
+        setTimeout(() => {
+          store.write(`users/${message.author.id}/cooldowns/mine`, 0);
+        }, 3000);
       }
       else if(data[`tools`][`pickaxe`][`type`] == `stone`) {}
       else if(data[`tools`][`pickaxe`][`type`] == `iron`) {}
