@@ -59,7 +59,7 @@ fs.readdir(`./discord-bot/commands/`, (err, files) => {
 /* Client Checks */
 function refreshActivity() {
 	let botGame = `Minecraft`;
-	let memberCount = client.guilds.get(`641766195019644989`).memberCount || 0;
+	let memberCount = client.users.size;
 	client.user.setPresence({
 			game: { 
 					name: `${memberCount} users on ${botGame}.`,
@@ -92,12 +92,15 @@ client.on(`message`, async message => {
   if(message.guild.id == `641766195019644989` && message.channel.name.slice(0, 6) != `mining`) return message.delete();
 
   /* Command Shortcuts */
-  if(command == `c`) client.commands.get(`chop`).run(client, message, args);
-  if(command == `m`) client.commands.get(`mine`).run(client, message, args);
-  if(command == `cd`) client.commands.get(`cooldown`).run(client, message, args);
+  if(command == ``) return message.channel.send(`${message.author} Please don't use a blank command!`);
+  else if(command == `c`) client.commands.get(`chop`).run(client, message, args);
+  else if(command == `m`) client.commands.get(`mine`).run(client, message, args);
+  else if(command == `inv` || command == `i`) client.commands.get(`inventory`).run(client, message, args);
+  else if(command == `cd`) client.commands.get(`cooldown`).run(client, message, args);
   else {
     let cmd = client.commands.get(command);
 	  if(cmd) cmd.run(client, message, args);
+    else return message.channel.send(`${message.author} That command doesn't exist!`);
   }
 });
 
