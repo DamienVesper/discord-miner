@@ -7,7 +7,7 @@ let store = new jsonstore(config.jsonstoreToken);
 module.exports.run = async(client, message, args) => {
   store.read(`users/${message.author.id}`).then(data => {
     if(!data) return message.channel.send(`${message.author} Do \`${config.prefix}start\` to begin your adventure!`);
-    if(new Date() - parseInt(data[`cooldowns`][`chop`]) >= 60000) {
+    if(new Date() - new Date(data[`cooldowns`][`chop`]) >= 60000) {
       if(data[`tools`][`axe`][`type`] == `wood`) {
         let oakPickup = Math.floor((Math.random() * 15) + 1) * (data[`tools`][`axe`][`enchantments`][`efficiency`] + 1);
         
