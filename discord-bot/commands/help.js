@@ -10,9 +10,11 @@ module.exports.run = async(client, message, args) => {
     .addField(`${config.prefix}start`, `Register account.`, true)
     .addField(`${config.prefix}mine`, `Mine ores and stone.`, true)
     .addField(`${config.prefix}chop`, `Chop some wood!.`, true)
+    .addField(`${config.prefix}sell [material]`, `Sell your material.`, true)
+    .addField(`${config.prefix}cooldown`, `See your cooldowns.`, true)
     .addField(`${config.prefix}inventory (user)`, `Get a user's inventory.`, true)
-    .addField(`${config.prefix}support`, `Join our support server!`, true)
     .addField(`${config.prefix}invite`, `Invite the bot!`, true)
+    .addField(`${config.prefix}support`, `Join our support server!`, true)
     .setTimestamp(new Date())
     .setFooter(config.footer);
   

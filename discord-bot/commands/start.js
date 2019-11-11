@@ -73,7 +73,9 @@ module.exports.run = async(client, message, args) => {
           "gold": 0,
           "iron": 0,
           "coal": 0
-        }
+        },
+        "money": 0,
+        "clanID": null
       },
       "banned": false
     });

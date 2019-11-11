@@ -7,7 +7,8 @@ let store = new jsonstore(config.jsonstoreToken);
 module.exports.run = async(client, message, args) => {
   store.read(`users/${message.author.id}`).then(data => {
     if(!data) return message.channel.send(`${message.author} Do \`m!start\` to begin your adventure!`);
-    if(data[`cooldowns`][`mine`] == 0) {
+
+    if(new Date() - new Date(data[`cooldowns`][`mine`]) >= 3000) {
       if(data[`tools`][`pickaxe`][`type`] == `wood`) {
         let stonePickup = Math.floor((Math.random() * 10) + 1) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
         let coalPickup = Math.floor((Math.random() * 7) + 1) * (data[`tools`][`pickaxe`][`enchantments`][`efficiency`] + 1);
@@ -17,10 +18,7 @@ module.exports.run = async(client, message, args) => {
         
         message.channel.send(`You mined ${stonePickup} <:Stone:642139596670500890> and ${coalPickup} <:Coal:642139596615843840> with your <:WoodPick:642139596779683861>.`);
         
-        store.write(`users/${message.author.id}/cooldowns/mine`, 1);
-        setTimeout(() => {
-          store.write(`users/${message.author.id}/cooldowns/mine`, 0);
-        }, 3000);
+        store.write(`users/${message.author.id}/cooldowns/mine`, new Date());
       }
       else if(data[`tools`][`pickaxe`][`type`] == `stone`) {}
       else if(data[`tools`][`pickaxe`][`type`] == `iron`) {}

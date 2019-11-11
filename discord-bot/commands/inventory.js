@@ -22,6 +22,11 @@ module.exports.run = async(client, message, args) => {
 
       let sEmbed = new Discord.RichEmbed()
         .setTitle(`Player Inventory: ${invUser}`)
+        .addField(`**Essentials**:
+Money: ${data[`money`]}
+Pickaxe: <:WoodPick:642139596779683861>
+Axe: <:WoodAxe:642139596557254656>
+`, `\u200B`, true)
         .addField(`**Building Materials**:
 <:OakLog:642139596645466113>: ${data[`materials`][`buildingBlocks`][`oakLog`]}
 <:AcaciaLog:642139596624363520>: ${data[`materials`][`buildingBlocks`][`acaciaLog`]}
@@ -45,6 +50,11 @@ module.exports.run = async(client, message, args) => {
 
       let sEmbed = new Discord.RichEmbed()
         .setTitle(`Player Inventory: ${message.author.username}#${message.author.discriminator}`)
+        .addField(`**Essentials**:
+Money: ${data[`money`]}
+Pickaxe: <:WoodPick:642139596779683861>
+Axe: <:WoodAxe:642139596557254656>
+`, `\u200B`, true)
         .addField(`**Building Materials**:
 <:OakLog:642139596645466113>: ${data[`materials`][`buildingBlocks`][`oakLog`]}
 <:AcaciaLog:642139596624363520>: ${data[`materials`][`buildingBlocks`][`acaciaLog`]}

@@ -1,12 +1,13 @@
 {
-  "oak": null,
-  "spruce": null,
-  "acacia": null,
-  "darkOak": null,
-  "diamond": null,
-  "gold": null,
-  "iron": null,
-  "redstone": null,
-  "lapis": null,
-  "stone": null
+  "oak": 2,
+  "spruce": 4,
+  "acacia": 8,
+  "darkOak": 6,
+  "diamond": 250,
+  "gold": 100,
+  "iron": 50,
+  "redstone": 65,
+  "lapis": 70,
+  "stone": 3,
+  "coal": 2
 }
