@@ -3,22 +3,30 @@ const { config } = require(`../index.js`);
 const jsonstore = require(`jsonstore.io`);
 let store = new jsonstore(config.jsonstoreToken);
 
-module.exports.run = async(client, message, args) => {  
-  let sEmbed = new Discord.RichEmbed()
-    .setTitle(`Bot Help`)
-    .addField(`${config.prefix}help`, `This command.`, true)
-    .addField(`${config.prefix}start`, `Register account.`, true)
-    .addField(`${config.prefix}mine`, `Mine ores and stone.`, true)
-    .addField(`${config.prefix}chop`, `Chop some wood!.`, true)
-    .addField(`${config.prefix}sell [material]`, `Sell your material.`, true)
-    .addField(`${config.prefix}cooldown`, `See your cooldowns.`, true)
-    .addField(`${config.prefix}inventory (user)`, `Get a user's inventory.`, true)
-    .addField(`${config.prefix}invite`, `Invite the bot!`, true)
-    .addField(`${config.prefix}support`, `Join our support server!`, true)
-    .setTimestamp(new Date())
-    .setFooter(config.footer);
-  
-  message.channel.send(sEmbed);
+module.exports.run = async(client, message, args) => {
+  try {
+    let sEmbed = new Discord.RichEmbed()
+      .setTitle(`Bot Help`)
+      .addField(`\u200B`, `
+\`${config.prefix}start\` - Register.
+\`${config.prefix}mine\` - Mine items.
+\`${config.prefix}chop\` - Chop items.
+\`${config.prefix}sell [item]\` - Sell items.
+\`${config.prefix}shop [type]\` - View shops!
+\`${config.prefix}buy [tool] [grade]\` - Buy items.
+`, true)
+      .addField(`\u200B`, `
+\`${config.prefix}balance <user>\` - View a user's balance.
+\`${config.prefix}cooldown\` - See your cooldowns.
+\`${config.prefix}inventory <user>\` - Get a user's inventory.
+\`${config.prefix}invite\` - Invite the bot!
+\`${config.prefix}support\` - Join our support server!
+`, true)
+      .setTimestamp(new Date())
+      .setFooter(config.footer);
+
+    message.channel.send(sEmbed);
+  } catch(err) { console.log(err); }
 }
 
 module.exports.config = {

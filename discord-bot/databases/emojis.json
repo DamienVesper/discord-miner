@@ -1,0 +1,50 @@
+{
+  "tools": {
+    "sword": {
+      "wood": "<:WoodSword:642139596922159124>",
+      "stone": "<:StoneSword:642139596934742027>",
+      "iron": "<:IronSword:642139596699992074>",
+      "gold": "<:GoldSword:648241201782194176>",
+      "diamond": "<:DiamondSword:642139596477431866>"
+    },
+    "pickaxe": {
+      "wood": "<:WoodPick:642139596779683861>",
+      "stone": "<:StonePick:642139596645466131>",
+      "iron": "<:IronPick:642139596322373663>",
+      "gold": "<:GoldPick:642139596355797027>",
+      "diamond": "<:DiamondPick:642139596683214848>"
+    },
+    "shovel": {
+      "wood": "<:WoodShovel:648241201845239840>",
+      "stone": "<:StoneShovel:648241201895702530>",
+      "iron": "<:IronShovel:648241201790844928>",
+      "gold": "<:GoldShovel:648241201794777108>",
+      "diamond": "<:DiamondShovel:648241201782325278>"
+    },
+    "axe": {
+      "wood": "<:WoodAxe:642139596557254656>",
+      "stone": "<:StoneAxe:642139596645203978>",
+      "iron": "<:IronAxe:642139596662112266>",
+      "gold": "<:GoldAxe:642139596377030667>",
+      "diamond": "<:DiamondAxe:642139596632752128>"
+    },
+    "hoe": {
+      "wood": "<:WoodHoe:648241201882988565>",
+      "stone": "<:StoneHoe:648241202738495489>",
+      "iron": "<:IronHoe:648241201484529696>",
+      "gold": "<:GoldHoe:648241201811816461>",
+      "diamond": "<:DiamondHoe:648241201895702548>"
+    }
+  },
+  "materials": {
+    "building": {},
+    "ores": {
+      "ironIngot": "<:IronIngot:642139596653854730>",
+      "goldIngot": "<:GoldIngot:642139596620300298>",
+      "diamond": "<:Diamond:642139596586614824>",
+      "redstone": "<:Redstone:648241201803165706>",
+      "lapis": "<:LapisLazuli:648241201832656920>",
+      "emerald": "<:Emerald:649423239029981204>"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "pickaxe": {
+    "stone": 1e3,
+    "iron": 125e3,
+    "gold": 1e5,
+    "diamond": 1e6
+  },
+  "axe": {
+    "stone": 1e3,
+    "iron": 1e4,
+    "gold": 1e5,
+    "diamond": 1e6
+  }
+}

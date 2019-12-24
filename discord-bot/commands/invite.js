@@ -4,7 +4,8 @@ const jsonstore = require(`jsonstore.io`);
 let store = new jsonstore(config.jsonstoreToken);
 
 module.exports.run = async(client, message, args) => {
-  message.channel.send(`You can invite the bot from this link: https://disc-miner.glitch.me/invite.`)
+  try { message.channel.send(`You can invite the bot from this link: https://disc-miner.glitch.me/invite.`); }
+  catch(err) { console.log(err); }
 }
 
 module.exports.config = {

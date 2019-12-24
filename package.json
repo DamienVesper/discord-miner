@@ -1,7 +1,4 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
   "name": "disc-miner",
   "version": "0.0.1",
   "description": "A Discord bot centered around Minecraft, where one can mine, chop and sell items to buy better tools and enchantments.",
@@ -10,14 +7,16 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "sqlite3": "^4.1.0",
+    "dbl-api": "^1.2.1",
     "discord.js": "^11.5.1",
-    "getjson": "^0.0.1",
+    "events": "^3.0.0",
+    "express": "^4.17.1",
     "fs": "^0.0.2",
-    "math.js": "^1.1.45",
+    "getjson": "^0.0.1",
     "jsonstore.io": "^1.1.0",
-    "events": "^3.0.0"
+    "math.js": "^1.1.45",
+    "sqlite3": "^4.1.1",
+    "util": "^0.12.1"
   },
   "engines": {
     "node": "8.x"

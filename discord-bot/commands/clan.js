@@ -4,7 +4,8 @@ const jsonstore = require(`jsonstore.io`);
 let store = new jsonstore(config.jsonstoreToken);
 
 module.exports.run = async(client, message, args) => {
-  return message.channel.send(`${message.author} This command is not available!`);
+  try { return message.channel.send(`${message.author} This command is not available!`); }
+  catch(err) { console.log(err); }
 }
 
 module.exports.config = {

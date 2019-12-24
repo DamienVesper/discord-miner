@@ -1,13 +1,15 @@
 {
   "oak": 2,
-  "spruce": 4,
-  "acacia": 8,
-  "darkOak": 6,
-  "diamond": 250,
-  "gold": 100,
-  "iron": 50,
-  "redstone": 65,
-  "lapis": 70,
-  "stone": 3,
-  "coal": 2
+  "birch": 4,
+  "spruce": 6,
+  "darkOak": 12,
+  "acacia": 16,
+
+  "coal": 2,
+  "stone": 1,
+  "iron": 25,
+  "redstone": 32,
+  "lapis": 62.5,
+  "gold": 50,
+  "diamond": 125
 }
