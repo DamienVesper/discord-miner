@@ -12,9 +12,9 @@ let client = new Discord.Client({ disableEveryone: true });
 var config = {
 	developer: `DamienVesper`,
 	developerTag: `4927`,
-	developerID: `386940319666667521`,
-  // developerID: `652273636924719105`,
-	prefix: `m!`,
+	// developerID: `386940319666667521`,
+  developerID: `652273636924719105`,
+	prefix: `v!`,
 	token: process.env.DISCORD_BOT_TOKEN,
   jsonstoreToken: process.env.JSONSTORE_TOKEN,
 	version: `0.1.6`,

@@ -15,13 +15,16 @@ module.exports.run = async(client, message, args) => {
 
       let cd = {
         mine: Math.floor((cooldowns.mine + (new Date(data.mine) - new Date())) / 1000),
-        chop: Math.floor((cooldowns.chop + (new Date(data.chop) - new Date())) / 1000)//,
+        chop: Math.floor((cooldowns.chop + (new Date(data.chop) - new Date())) / 1000),
+        sell: Math.floor((cooldowns.sell + (new Date(data.sell) - new Date())) / 1000)//,
         // dig: Math.round((60000 + (new Date(data[`dig`]) - new Date())) / 1000)
       }
-      if(cd.mine > 0) sEmbed.addField(`${config.prefix}mine`, `\`${cd.mine} seconds\``, true);
+      if(cd.mine > 1) sEmbed.addField(`${config.prefix}mine`, `\`${cd.mine} second${cd.mine == 1 ? ``: `s`}\``, true);
       else sEmbed.addField(`${config.prefix}mine`, `\`Ready\``, true);
-      if(cd.chop > 0) sEmbed.addField(`${config.prefix}chop`, `\`${cd.chop} seconds\``, true);
+      if(cd.chop > 1) sEmbed.addField(`${config.prefix}chop`, `\`${cd.chop} second${cd.chop == 1 ? ``: `s`}\``, true);
       else sEmbed.addField(`${config.prefix}chop`, `\`Ready\``, true);
+      if(cd.sell > 1) sEmbed.addField(`${config.prefix}sell`, `\`${cd.sell} second${cd.sell == 1 ? ``: `s`}\``, true);
+      else sEmbed.addField(`${config.prefix}sell`, `\`Ready\``, true);
 
       message.channel.send(sEmbed);
     });
